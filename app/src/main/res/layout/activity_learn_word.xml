@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
+        android:contentDescription="close image button"
         android:src="@drawable/ic_close"
         android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
@@ -25,6 +26,7 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="96dp"
         android:text="Galaxy"
+        android:fontFamily="@font/nunito_bold"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,10 +61,12 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:fontFamily="@font/rubik_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Сломать" />
+                android:text="Сломать"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,10 +88,12 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:fontFamily="@font/rubik_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Сон" />
+                android:text="Сон"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,10 +115,12 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:fontFamily="@font/rubik_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Галактика" />
+                android:text="Галактика"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,10 +142,12 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:fontFamily="@font/rubik_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Утюг" />
+                android:text="Утюг"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
 
@@ -148,7 +158,7 @@
         android:layout_width="311dp"
         android:layout_height="58dp"
         android:backgroundTint="#2574FF"
-        android:text="Skip"
+        android:text="@string/button_skip"
         android:textAllCaps="true"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -170,6 +180,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
             android:layout_marginTop="18dp"
+            android:contentDescription="correct answer icon"
             android:src="@drawable/ic_correct"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -179,7 +190,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Correct!"
+            android:text="@string/tittle_correct"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -190,7 +201,7 @@
             android:layout_height="58dp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="24dp"
-            android:text="Continue"
+            android:text="@string/button_continue"
             android:textAllCaps="true"
             android:textColor="#0EAD69"
             android:backgroundTint="@color/white"
