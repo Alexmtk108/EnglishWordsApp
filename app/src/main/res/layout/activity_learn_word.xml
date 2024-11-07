@@ -17,15 +17,42 @@
         android:layout_marginStart="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_marginStart="60dp"
+        android:id="@+id/numWrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="0"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/red"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        tools:text="1000" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:layout_marginEnd="60dp"
+        android:id="@+id/numCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="0"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/green"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        tools:text="1000" />
+
+    <TextView
+        android:id="@+id/englishWordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="96dp"
-        android:text="Galaxy"
+        android:text=""
         android:fontFamily="@font/nunito_bold"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,13 +64,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/englishWordTextView">
 
         <LinearLayout
+            android:id="@+id/answer1"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@drawable/shape_rounded_contains"
@@ -61,6 +89,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/option1TextView"
                 style="@style/TextViewVariantsStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,6 +117,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/option2TextView"
                 style="@style/TextViewVariantsStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,6 +145,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/option3TextView"
                 style="@style/TextViewVariantsStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,6 +173,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/option4TextView"
                 style="@style/TextViewVariantsStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,9 +198,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/continueBottomConstrain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0EAD69"
+        android:background="#CBCBCF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -181,22 +214,25 @@
             android:layout_marginStart="36dp"
             android:layout_marginTop="18dp"
             android:contentDescription="correct answer icon"
+            android:visibility="invisible"
             android:src="@drawable/ic_correct"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/tittle_correct"
+            android:visibility="invisible"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <android.widget.Button
+            android:id="@+id/buttonNext"
             android:layout_width="311dp"
             android:layout_height="58dp"
             android:layout_marginTop="12dp"
